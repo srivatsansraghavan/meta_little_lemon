@@ -6,7 +6,9 @@ const CallToAction = () => {
   return (
     <section className="home" id="home">
       <span className="food-image">
-        <button onClick={() => navigate("/booking")}>Book a table</button>
+        <button data-testid="bookTableBtn" onClick={() => navigate("/booking")}>
+          Book a table
+        </button>
       </span>
       Based in Chicago, Illinois, Little Lemon is a family-owned Mediterranean
       restaurant, focused on traditional recipes served with a modern twist. The

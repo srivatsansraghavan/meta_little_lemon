@@ -23,13 +23,16 @@ const Confirmation = () => {
         <div className="booking-confirm">
           <h2>Confirmation details:</h2>
           <p>
-            <strong>Booking for:</strong> {booking.bookingFor}
+            <strong>Number of guests:</strong> {booking.bookingFor}
           </p>
           <p>
             <strong>Booking Date:</strong> {booking.date}
           </p>
           <p>
             <strong>Booking Time:</strong> {booking.time}
+          </p>
+          <p>
+            <strong>Booking Occassion:</strong> {booking.occassion}
           </p>
         </div>
       )}

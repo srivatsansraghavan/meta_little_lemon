@@ -20,6 +20,7 @@ const BookingPage = () => {
   const [date, setDate] = useState(new Date().toLocaleDateString("en-IN"));
   const [time, setTime] = useState(times[1]);
   const [bookingFor, setBookingFor] = useState(1);
+  const [occassion, setOccassion] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
 
   const handleSubmit = (e) => {
@@ -40,9 +41,13 @@ const BookingPage = () => {
       setErrorMessage("Should be for less than 8 people");
       return;
     }
+    if (occassion === "") {
+      setErrorMessage("Occasion should not be empty");
+      return;
+    }
     localStorage.setItem(
       "BookingDone",
-      JSON.stringify({ date, time, bookingFor })
+      JSON.stringify({ date, time, bookingFor, occassion })
     );
     navigate("/confirmation");
   };
@@ -52,7 +57,7 @@ const BookingPage = () => {
       <Header />
       <section className="booking-form" id="bookingForm">
         <h2>Book Now</h2>
-        <p className="form-info">
+        <p className="form-info" data-testid="formInfo">
           Please choose your Dine Date, Time and for how many you are booking
           table for.
         </p>
@@ -78,7 +83,7 @@ const BookingPage = () => {
             </option>
           ))}
         </select>
-        <label htmlFor="bookingFor">Booking For</label>
+        <label htmlFor="bookingFor">Number of guests</label>
         <input
           id="bookingFor"
           type="number"
@@ -88,12 +93,17 @@ const BookingPage = () => {
           value={bookingFor}
           onChange={(e) => setBookingFor(e.target.value)}
         />
-        <button
-          className="book-table-btn"
-          type="button"
-          onClick={handleSubmit}
-          disabled={date !== "" && time !== "" && bookingFor < 1}
+        <label htmlFor="occassion">Occassion</label>
+        <select
+          id="occassion"
+          value={occassion}
+          onChange={(e) => setOccassion(e.target.value)}
         >
+          <option></option>
+          <option value="Birthday">Birthday</option>
+          <option value="Anniversary">Anniversary</option>
+        </select>
+        <button className="book-table-btn" type="button" onClick={handleSubmit}>
           Book a table
         </button>
       </section>

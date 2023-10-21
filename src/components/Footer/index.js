@@ -1,5 +1,5 @@
 function Footer() {
-  return <footer>Copyright Little Lemon Restaurant</footer>;
+  return <footer>&#169; Little Lemon Restaurant</footer>;
 }
 
 export default Footer;
