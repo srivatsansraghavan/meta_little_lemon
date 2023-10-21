@@ -1,0 +1,46 @@
+.special-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.special-menu h2 {
+    width: 100%;
+    text-align: center;
+}
+
+.special-menu-card {
+    flex: 1;
+    width: 250px;
+    height: 350px;
+    background-color: cornsilk;
+    border: 2px solid black;
+    margin: 5%;
+    box-shadow: 2px 2px;
+}
+
+.special-menu-title {
+    text-align: center;
+    font-weight: 500;
+    font-size: large;
+}
+
+.special-menu-image {
+    width: 95%;
+    height: 40%;
+    margin: 2%;
+}
+
+.special-menu-description {
+    margin: 2%;
+    text-align: justify;
+    font-weight: 300;
+    font-size: medium;
+}
+
+.special-menu-price {
+    text-align: center;
+    font-weight: 600;
+    font-size: larger;
+}

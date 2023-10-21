@@ -1,0 +1,25 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: greenyellow;
+}
+
+main {
+    margin: 5px 20px;
+    padding: 0px 50px;
+    font-size: large;
+}
+
+h1 {
+     text-align: center;
+}
+
+h3 {
+    display: flex;
+    justify-content: center;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+}

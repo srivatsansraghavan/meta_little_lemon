@@ -1,0 +1,30 @@
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: blueviolet;
+}
+
+.navbar li {
+    list-style-type: none;
+    display: inline;
+    text-decoration: none;
+}
+
+.navbar .nav-item {
+    padding: 10px 25px;
+    color: white;
+    text-decoration: none;
+    font-size: large;
+}
+
+
+@media screen and (max-width:750px) {
+    .navbar {
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .nav-item {
+        width: 100vw;
+    }
+}
